@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+<head>
+  <title>{% block title %}FastSunday{% endblock %}</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <header>{% include "tl/header.html" %}</header>
+  <div id="body">{% block body %}{% endblock %}</div>
+  <footer>{% include "tl/footer.html" %}</footer>
+</body>
+</html>
+{% endautoescape %}
+
