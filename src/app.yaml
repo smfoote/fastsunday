@@ -11,5 +11,11 @@ libraries:
   version: latest
 
 handlers:
+- url: /login
+  script: login.app
+- url: /fast/create
+  script: create_fast.app
+- url: /fast/\d+/(commit|challenge)
+  script: commit.app
 - url: /
   script: home.app

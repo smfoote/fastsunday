@@ -3,5 +3,6 @@ from google.appengine.api import users
 from user import User
 
 class Fast(ndb.Model):
-    user = ndb.ReferenceProperty(User, collection_name="user_fasts")
     date = ndb.DateProperty()
+    title = ndb.StringProperty()
+    committed_user_count = ndb.IntegerProperty()
